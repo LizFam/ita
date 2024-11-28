@@ -3,7 +3,36 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <h1>All about alpacas</h1>
-<p>Do you like alpacas?</p>
+<p>
+  <strong>Do you like alpacas?</strong>
+</p>
+<p>
+  <label>
+    <input id="correct" type="radio" name="answer" value="yes">
+    Yes
+  </label>
+</p>
+<p>
+  <label>
+    <input type="radio" name="answer" value="no">
+    No
+  </label>
+</p>
+<button id="button">
+  Submit answer
+</button>
+<h1 id="result">...</h1>
+
+<script>
+function clickAction() {
+  result.textContent = 'You're terrible.';
+  if (correct.checked) {
+    result.textContent = 'Of course, the only correct response is yes';
+  }
+}
+button.onclick = clickAction;
+</script>
+
 <br>
 <p></p>
 <h2>Four facts about alpacas</h2>
